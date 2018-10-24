@@ -21,10 +21,14 @@ const toggleMenu = () => {
 }
 
 const toggleWithBody = () => {
+  if(count%2 !== 0){
+    count++;
+  }
     TweenLite.to(".menu", 3, { 
       ease: Elastic.easeOut.config(1, 0.3), 
       left:-350
     });
+    console.log(count);
 }
 
 // Start Here: Create a reference to the ".menu" class
